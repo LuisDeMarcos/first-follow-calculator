@@ -80,35 +80,9 @@ def calcularDirectores(producciones): # Realizará el cálculo de cada director
             inicial(producciones, producciones[i][j], producciones[i][0])
             print(directores_set)
 
-tests = [
-#Ejercicios
-["S:Ad","A:aBbX","X:bcX|*","B:abY","Y:BC|*","C:cC|d"],  #0
-["S:Ae","A:aBcD|*","B:aBc|*","D:bbDd|*"],               #1
-["S:aS|Ab","A:BCD|CB","B:cS|*","C:dS|*","D:eS"],        #2
-["S:ABz","A:xBC","C:y|*","B:AzD|z","D:x|*"],            #3
-["S:aX","X:SY|Z","Y:bZ|Z","Z:bZ|*"],                    #4
-["S:aXY","X:aX|*","Y:bY|*"],                            #5
-["S:bXZ","Z:aZ|*","X:A|B","B:cY","Y:A|cA","A:*"],       #6
-# Examen
-["S:bSb|Ac|bb","A:Aaa|aB|Bc","B:ac|*"],                 #7
-# Extras
-["A:Aa|BCD","B:b|*","C:c|*","D:d|Ce"]                   #8
-]
-
-testsNo =[
-["S:ab|B|*|ab", "B:a|b"],
-["S:Xa","X:d|Z","Z:bZ|*"],
-["S:AB|BA", "A:a|*", "B:b|*"],
-["S:a|aA|ABC", "A:bB|c|*", "B:d|*", "C:e"],
-["S:Aa","A:B", "B:*"],
-["S:SX|b", "X:a"]
-]
-
 def main():
-    #test = tests[3]
-    test = testsNo[2]
-    #print("Grammar format:\n  S:Aa|b|* (* as epsilon, must be in the last position)\n  A:c\n  0 (to end grammar)\nIntroduce your grammar: ")
-    #test = leerProducciones()
+    print("Grammar format:\n  S:Aa|b|* (* as epsilon, must be in the last position)\n  A:c\n  0 (to end grammar)\nIntroduce your grammar: ")
+    test = leerProducciones()
     print(test)
     producciones = procesarProducciones(test)
     calcularDirectores(producciones)
